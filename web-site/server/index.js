@@ -30,5 +30,14 @@ const start = async () => {
   }
 };
 
+
+// после всех app.use и маршрутов
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "../public/404.html"));
+});
+
+
+
+
 start();
   
