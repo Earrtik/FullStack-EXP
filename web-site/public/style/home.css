@@ -1,0 +1,56 @@
+.navbar,.header-2{
+    display: flex;
+    align-items: center;
+}
+.navbar a, .header-2 a  {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.number{
+    margin-right: 1rem;
+}
+.menu a {
+    margin-left: 1.4rem;
+}
+.material-icons-outlined{
+ 
+    transform: translateY(4px);
+    margin-right: 0.4rem;
+}
+
+.navbar, .menu   {
+    margin: auto;
+    max-width: 1400px;
+    
+}
+.header-2,.burger-menu{
+    margin: auto;
+    max-width: 1400px;
+}
+.header-2{
+    background-color: #ecf1f8;
+    padding-bottom:  10px; 
+}
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;     
+  height: 22px;    
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  float: left;
+  margin-right: 1rem;
+
+}
+
+.burger-menu span {
+  display: block;
+  height: 3px;          
+  background-color: black;
+  border-radius: 2px;   /* colțuri rotunjite */
+}

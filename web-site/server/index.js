@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.use(express.static(path.join(__dirname,"../public")));
+app.use(express.static(path.join(__dirname, "../public/HTML")));
 
 app.get("/", (req,res)=>{
   res.sendFile(path.join(__dirname, "../public"));
@@ -33,7 +33,7 @@ const start = async () => {
 
 // после всех app.use и маршрутов
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "../public/404.html"));
+  res.status(404).sendFile(path.join(__dirname, "../public/HTML/404.html"));
 });
 
 
