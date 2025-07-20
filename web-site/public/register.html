@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Register</h1>
+
+  <form id="registerForm">
+    <input type="email" name="email" placeholder="Email" required /><br/><br>
+    <input type="password" name="password" placeholder="Parola" required /><br/><br>
+    <button type="submit">Register</button>
+  </form>
+
+  <br><br>
+  <div id="responseMessage"></div>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const responseMessage = document.getElementById("responseMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form); 
+
+      const data = {
+        email: formData.get("email"),
+        password: formData.get("password")
+      };
+
+      try {
+        const res = await fetch("/api/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        responseMessage.textContent = result.message;
+      } catch (err) {
+        responseMessage.textContent = "Ошибка при отправке запроса.";
+      }
+    });
+  </script>
+</body>
+</html>
