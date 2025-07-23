@@ -43,6 +43,8 @@
   height: 3px;          
   background-color: black;
   border-radius: 2px;  
+  cursor: pointer;
+
 }
 .produs{
     cursor: pointer; /* Div produse +burger menu pentru cautare primeste pointer */
@@ -70,8 +72,8 @@
   transform: translateY(4px);
 }
 .material-icons-outlined{
-    transform: translateY(4px);
-    margin-right: 1rem;
+    transform: translateY(5px);
+    margin-right: 0.3rem;
     font-size: 1.8rem;
 }
 
