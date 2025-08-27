@@ -46,7 +46,7 @@
   cursor: pointer;
 
 }
-.produs{
+.produs,.burger-menu{
     cursor: pointer; /* Div produse +burger menu pentru cautare primeste pointer */
 }
 #produs-search {
@@ -78,3 +78,14 @@
 }
 
 /* FINISH All Style for icon */
+
+.carusel-photo{
+ 
+  margin: auto;
+  max-width: 1400px;
+  margin-top: 2rem;
+
+}
+.photo1-carusel{
+  width: 1400px;
+}
